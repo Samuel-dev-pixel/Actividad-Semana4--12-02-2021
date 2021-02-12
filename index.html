@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	</title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	.entrada{
+		position: absolute;
+		left: 35%;
+        top: 10%;
+        width: 30%;
+        height: 10%;
+        background-color: rgb(33,42,121);
+        text-align: center;
+        color: black;
+        font-family: 'cooper black';
+        font-size: 30px;
+	}
+    .botonsumar{
+    	position: absolute;
+    	left: 40%;
+    	top: 30%;
+    	width: 20%;
+    	height: 10%;
+    	background-color: rgb(153,217,234);
+    	text-align: center;
+    	color: black;
+        font-family: 'cooper black';
+        font-size: 30px;
+    }
+    .posicion{
+		position: absolute;
+		left: 30%;
+        top: 70%;
+        width: 40%;
+        height: 10%;
+        background-color: rgb(0,162,232);
+        text-align: center;
+        color: black;
+        font-family: 'cooper black';
+        font-size: 30px;
+	}
+	.suma{
+		position: absolute;
+		left: 35%;
+        top: 50%;
+        width: 30%;
+        height: 10%;
+        background-color: rgb(166,228,255);
+        text-align: center;
+        color: black;
+        font-family: 'cooper black';
+        font-size: 30px;
+	}
+	.cuenta{
+		position: absolute;
+		left: 35%;
+        top: 88%;
+        width: 30%;
+        height: 10%;
+        background-color: rgb(63,72,204);
+        text-align: center;
+        color: black;
+        font-family: 'cooper black';
+        font-size: 30px;
+	}
+	.botoncontar{
+		position: absolute;
+		left: 75%;
+        top: 80%;
+        width: 15%;
+        height: 10%;
+        background-color: rgb(26,31,94);
+        text-align: center;
+        color: black;
+        font-family: 'cooper black';
+        font-size: 30px;
+	}
+    
+</style>
+<body>
+
+	<input type="input" name="Número" class="entrada" value="" placeholder="Ingresa un número" id="ent">
+    <div class="botonsumar" onclick="sumar()">SUMAR</div>
+    <input type="input" name="Suma" class="suma" value="0" id="sal">
+
+    <input type="input" name="posicion" class="posicion" value="0" placeholder="Ingresa la posición del resultado" id="entcue">
+    <input type="text" name="Cuenta" class="cuenta" value="" id="salcue">
+    <div class="botoncontar" onclick="contar()">Mostrar</div>
+    <script type="text/javascript">
+    	var a = document.getElementById('ent');
+    	var b = document.getElementById('sal');
+    	var c = document.getElementById('entcue');
+    	var d = document.getElementById('salcue');
+
+    	x=[b.value]
+
+
+        function sumar() {
+        	b.value = Number(b.value) + Number(a.value);
+            x.push(b.value);
+        }
+
+        function contar() {
+        	d.value = x[c.value];
+        }
+    </script>
+
+</body>
+</html>
